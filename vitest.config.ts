@@ -11,7 +11,21 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html", "lcov"],
-      exclude: ["node_modules/", "dist/", ".eslintrc.cjs"],
+      exclude: [
+        "node_modules/",
+        "dist/",
+        ".eslintrc.cjs",
+        "**/*.test.*",
+        "**/*.spec.*",
+        "**/__tests__/**",
+        "**/*.config.*",
+        "**/vitest.config.*",
+        "**/vite.config.*",
+        "**/eslint.config.*",
+        "**/tsconfig.*",
+        "**/setupTests.*",
+        "**/vitest.setup.*",
+      ],
     },
   },
   resolve: {
